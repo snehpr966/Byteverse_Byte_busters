@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    
+
+    <title>Medicine Store</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+     <!-- Title Icon -->
+    <link rel="icon" href="images\icon.ico" alt="Logo">
+
+    
+<script type="text/javascript">
+
+  
+
+  function allLetter()
+  {
+   
+   letters = /^[A-Za-z]+$/;
+   if(document.fm.name.value.match(letters))
+     {
+   document.getElementById("msg1").innerHTML="";
+      return true;
+     }
+   else
+     {
+      document.getElementById("msg1").style.color="red";
+    document.getElementById("msg1").innerHTML="Enter All Character Only";
+     return false;
+     }
+  }
+  
+  function phoneValid()
+  {
+   
+      v=document.fm.phone.value;
+    
+   number = /^[0-9]+$/;
+   if(v.match(number))
+     {  
+       if(v.length==11)
+         {
+       document.getElementById("msg2").innerHTML="";
+          return true;
+         }
+       else
+         {
+            document.getElementById("msg2").style.color="red";
+          document.getElementById("msg2").innerHTML="Invalid Phone Number";
+           return false;
+         }
+        
+   }
+   else
+   {
+    document.getElementById("msg2").style.color="red";
+    document.getElementById("msg2").innerHTML="Invalid Phone Number";
+     return false;
+
+   }
+ }
+  
+  function emailvalid(){
+     v=document.fm.email.value;
+     pos = v.search("@");
+     pos1 = v.search(".com");
+  if(pos != -1 && pos1 != -1){
+    
+  
+    document.getElementById("msg3").innerHTML="";
+    return true;
+  }
+  else{
+  
+    document.getElementById("msg3").style.color="red";
+    document.getElementById("msg3").innerHTML="Email Not Valid";
+    
+    return false;
+  }
+}
+
+
+
+  function validate(){
+
+  n=document.fm.name.value;
+  ph=document.fm.phone.value;
+  em=document.fm.email.value;
+  s=document.fm.subject.value;
+  m=document.fm.message.value;
+  
+  if(n=="")
+  {
+    document.getElementById("msg1").style.color="red";
+    document.getElementById("msg1").innerHTML="Please Input Your Name";
+    return false;
+  }
+  
+  
+  
+  else if(ph=="")
+  {
+    document.getElementById("msg2").style.color="red";
+    document.getElementById("msg2").innerHTML="Input valid phone number";
+    return false;
+  }
+  
+
+  else if(em=="")
+  {
+    document.getElementById("msg3").style.color="red";
+    document.getElementById("msg3").innerHTML="Input Valid email";
+    return false;
+
+  }
+
+  else if(s=="")
+  {
+    document.getElementById("msg4").style.color="red";
+    document.getElementById("msg4").innerHTML="Please Input Subject";
+    return false;
+  }
+  else if(m=="")
+  {
+    document.getElementById("characterLeft").style.color="red";
+    document.getElementById("characterLeft").innerHTML="Message Box Is Empty";
+    return false;
+  }
+ 
+  else{
+    
+    return true;
+  }
+
+  
+  
+}
+</script>
+
+</head>
+<body id="page-top">
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        
+        <div class="col-lg-3 text-center">
+        <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo" alt="Responsive image"></a>
+        </div>
+
+        <div class="col-lg-6 text-center">
+       
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        </div>
+
+
+        <div class="col-lg-3 collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="home.php"><img src="images/home.png" class="size2"></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"><img src="images/cart.png" class="size"></a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="login.html"><img src="images/user.png" class="size2"></a>
+            </li>
+          </ul>
+         
+        </div>
+
+      </nav>
+
+      
+        <!--Banner Section Starts-->
+    <section class="banner">
+            
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+       
+          <div class="collapse navbar-collapse" id="navbarResponsive" style="padding-left: 70px">
+          <ul class="navbar-nav mr-auto nav">
+            <li class="nav-item dropdown">
+              
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Health
+                  </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="home.php">MEDICINE & HEALTH</a>
+                  <a class="dropdown-item" href="babyfood.php">BABY CARE</a>
+                  <a class="dropdown-item" href="orthopaedic.php">ORTHOPAEDIC ITEMS</a>
+                </div>
+             
+            </li>
+            <li class="nav-item dropdown">
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Personal Care
+                  </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="women.php">WOMEN</a>
+                  <a class="dropdown-item" href="dental.php">DENTAL & ORAL CARE</a>
+                 
+              
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              
+               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    OCT Drugs
+                  </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="iv.php">IV INJECTION</a>
+                  <a class="dropdown-item" href="Powder.php">POWDER</a>
+                 
+                </div>
+              
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#page-top">Contact</a>
+            </li>
+          </ul>
+        </div>
+       </nav>
+     </section>
+
+
+     <section class="contactform">
+         <div class="container">
+          <div class="row">
+             <div class="col-lg-6">
+                  <div class="form-area">  
+                  <form action="contact.php" name="fm" method="post" role="form">
+                  <hr>
+                              <h3 style="margin-bottom: 25px;">Contact Form</h3>
+                      <div class="form-group">
+
+                    
+                      <span onmouseout="test()">Name:</span><br>
+                      <input  type="text" class="form-control" id="name" name="name" onkeyup="return allLetter()">
+                      <span id="msg1"></span><br>
+                    </div>
+                    <div class="form-group">
+                      <p>Email:</p>
+                      <input type="text" class="form-control" id="email" name="email" placeholder="abc@gmail.com" onkeyup="return emailvalid()">
+                      <span id="msg3"></span><br>
+                    </div>
+                    <div class="form-group">
+                      <p>Phone Number:</p>
+                      <input type="text" class="form-control" id="phone" name="phone" onkeyup="return phoneValid()">
+                      <span id="msg2"></span><br>
+                    </div>
+                    <div class="form-group">
+                      <p>Subject:</p>
+                      <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                      <span id="msg4"></span><br>
+                    </div>
+                              <div class="form-group">
+                                <p>Message:</p>
+                              <textarea class="form-control" type="textarea" id="message" name="message" placeholder="Type Your Message" maxlength="140" rows="7" ></textarea><span id="msg4"></span><br>
+                                  <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>                    
+                              </div>
+                      
+                 <input style="color:  #004d00;width:100px;" type="submit" onclick="return validate()" name="submit"  value="Submit" >
+
+                  <input style="color:  #ff0000;width: 100px; margin-bottom: 40px;" type="reset">
+                  </form>
+
+
+                </div>
+             </div>
+             
+         </div>
+       </div>
+     </section>
+
+     
+
+     <!-- Bootstrap core JavaScript -->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+
+    <!--Bootstrap JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--Contact JavaScript -->
+    <script src="js/contact.js"></script>
+</body>
+</html>
+
+

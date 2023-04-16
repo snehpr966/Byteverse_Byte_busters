@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml-stylesheet type="text/css" href="mystyle.css" ?>-->
+<section name="B" courseID="123">
+	<admin>
+		<Firstname>rakib</Firstname>
+		<Password>123</Password>
+		<email>rakib@gmail.com</email>
+		<phone>14785236954</phone>
+	</admin>
+	<admin>
+		<Firstname>dipto</Firstname>
+		<Password>12345</Password>
+		<email>dipto@gmail.com</email>
+		<phone>16413236954</phone>
+	</admin>
+	<admin>
+		<Firstname>fardin</Firstname>
+		<Password>123456</Password>
+		<email>fardin@gmail.com</email>
+		<phone>17885236954</phone>
+	</admin>
+</section>
